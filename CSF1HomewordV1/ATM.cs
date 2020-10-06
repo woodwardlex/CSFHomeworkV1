@@ -68,14 +68,14 @@ namespace CSF1HomewordV1
                 do
                 {
                     Console.Write("\nD) Deposit\nW) Withdraw\nA) Account Balance\nX) Exit");
-                    string userChoice = Console.ReadLine().ToLower();
+                    string userChoice = Console.ReadLine().ToUpper();
 
                     Console.Clear();
                     switch (userChoice)
                     {
                         case "D":
                         case "DEPOSIT":
-                            Console.Write("Enter the ammount you want to deposite: ");
+                            Console.Write("Enter the ammount you want to deposit: ");
                             int deposit = Convert.ToInt32(Console.ReadLine());
                             balanceTotal = balanceTotal + deposit;
                             Console.WriteLine("\nYour current balance is: {o:c}", balanceTotal);
@@ -100,6 +100,7 @@ namespace CSF1HomewordV1
                         case "Account Balance":
                             Console.WriteLine("Your current account balance: {0:c}", balanceTotal);
                             break;
+
                         case "X":
                         case "EXIT":
                             Console.WriteLine("\nThank you! Come again!\n");
